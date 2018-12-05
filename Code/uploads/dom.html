@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function mfun(){
+			var f = document.getElementById('form');
+			var d1 = document.createElement("div");
+			var d2 = document.createElement("div");
+			var i = document.createElement("button");
+			var c = document.createElement("button");
+			var b = document.getElementById('upload');
+			var br = document.createElement("BR");
+			f.removeChild(b);
+			d1.innerHTML = '<div class="form-group" id="d1"><label>Select file to upload:</label><input type="file" name="fileToUpload"></div>'
+			f.appendChild(d1);
+			d2.innerHTML = '<div class="form-group" id="d2"><label>Write short description</label><textarea class="form-control" rows="4" cols="15"></textarea></div>';
+			f.appendChild(d2);
+			i.innerHTML = 'Upload Now';
+			i.id = 'uploads';
+			
+			f.appendChild(i);
+			f.appendChild(br);
+			c.innerHTML = 'Close';
+			f.appendChild(c);
+		}
+	</script>
+</head>
+<body>
+	<div class="container" style="padding-top: 60px">
+		
+		<form class="form" role="form" action="" id="form" method="post" enctype="multipart/form-data">
+			<button class="btn btn-success" id="upload" type="button" onclick="mfun()">Upload File</button>
+          </form>
+    </div>
+</body>
+</html> 
